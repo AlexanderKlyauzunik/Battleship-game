@@ -3,13 +3,25 @@
 
 #include <QMainWindow>
 #include <QObject>
+#include<QPushButton>
+#include <QLayout>
 
-class main : public QMainWindow
+#include "field.h"
+
+class MainWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit main(QWidget *parent = nullptr);
+ MainWidget(QWidget *parent = nullptr);
 
+private:
+
+Field* pPlayersField;
+Field* pCPUsField;
+QPushButton* pStartButton;
+
+QVBoxLayout* pSettingsLayout;
+QHBoxLayout* pHorizLayout;
 signals:
 
 };

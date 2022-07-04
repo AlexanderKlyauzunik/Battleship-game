@@ -10,7 +10,8 @@ CONFIG += c++17
 
 SOURCES += \
     MainWindow.cpp \
-    field.cpp
+    field.cpp \
+    main.cpp
 
 HEADERS += \
     MainWindow.h \
