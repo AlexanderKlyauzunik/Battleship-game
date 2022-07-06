@@ -29,7 +29,7 @@
     <string>Arrangement of ships:</string>
    </property>
   </widget>
-  <widget class="QTableWidget" name="enemyfield">
+  <widget class="QTableWidget" name="enemyField">
    <property name="geometry">
     <rect>
      <x>240</x>
@@ -37,6 +37,9 @@
      <width>211</width>
      <height>211</height>
     </rect>
+   </property>
+   <property name="cursor" stdset="0">
+    <cursorShape>CrossCursor</cursorShape>
    </property>
    <property name="editTriggers">
     <set>QAbstractItemView::NoEditTriggers</set>
@@ -112,6 +115,9 @@
      <width>211</width>
      <height>211</height>
     </rect>
+   </property>
+   <property name="cursor" stdset="0">
+    <cursorShape>CrossCursor</cursorShape>
    </property>
    <property name="editTriggers">
     <set>QAbstractItemView::NoEditTriggers</set>
