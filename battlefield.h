@@ -16,8 +16,9 @@ protected:
     Ship ships[10];
     int horState;
 
-    int checkPlacement(int x, int y, int n, int hor);
+    int checkPlacement(int x, int y, int n, bool horizontal);
     bool validPosition(int x, int y);
+
 public:
     int shipAlive;
     int field[10][10];
@@ -32,9 +33,7 @@ public:
     BattleField();
     virtual int put (int x, int y) = 0;
     virtual int strike(int x,int y)=0;
-    virtual void save()=0;
     virtual void resetfield()=0;
-    virtual void load()=0;
 };
 
 #endif // BATTLEFIELD_H
