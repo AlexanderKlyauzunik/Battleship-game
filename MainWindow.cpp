@@ -1,19 +1,14 @@
-#include "MainWindow.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
 
-MainWidget::MainWidget(QWidget *parent)
+MainWindow::MainWindow(QWidget *parent) :
+    QWidget(parent),
+    ui(new Ui::MainWindow)
 {
-    this->pPlayersField = new Field();
-    this->pCPUsField = new Field();
-    this->pStartButton = new QPushButton("Start game");
+    ui->setupUi(this);
+}
 
-    this->pSettingsLayout = new QVBoxLayout();
-    this->pHorizLayout = new QHBoxLayout();
-
-   // pSettingsLayout->addWidget(pStartButton); - widget with ships?
-    pSettingsLayout->addWidget(pStartButton);
-    pHorizLayout->addWidget(pPlayersField);
-    pHorizLayout->addLayout(pSettingsLayout);
-    pHorizLayout->addWidget(pCPUsField);
-
-    this->setLayout(pHorizLayout);
+MainWindow::~MainWindow()
+{
+    delete ui;
 }

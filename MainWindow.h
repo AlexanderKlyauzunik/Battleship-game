@@ -1,29 +1,22 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QMainWindow>
-#include <QObject>
-#include<QPushButton>
-#include <QLayout>
+#include <QWidget>
 
-#include "field.h"
+namespace Ui {
+class MainWindow;
+}
 
-class MainWidget : public QWidget
+class MainWindow : public QWidget
 {
     Q_OBJECT
+
 public:
- MainWidget(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
 
 private:
-
-Field* pPlayersField;
-Field* pCPUsField;
-QPushButton* pStartButton;
-
-QVBoxLayout* pSettingsLayout;
-QHBoxLayout* pHorizLayout;
-signals:
-
+    Ui::MainWindow *ui;
 };
 
 #endif // MAINWINDOW_H
