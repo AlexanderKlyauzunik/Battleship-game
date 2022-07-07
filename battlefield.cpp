@@ -26,6 +26,26 @@ bool BattleField::validPosition(int x, int y)
     return x < 10 && x > -1 && y < 10 && y > -1;
 }
 
+void BattleField::setHor()
+{
+    horState = true;
+}
+
+void BattleField::setVert()
+{
+    horState = false;
+}
+
+void BattleField::setNDeck(int Decks)
+{
+    this->shipType = Decks;
+}
+
+bool BattleField::ready()
+{
+    return (currentState == 0 && this->shipAlive != 0);
+}
+
 
 int BattleField::checkPlacement(int x, int y, int n, bool horizontal)
 {
