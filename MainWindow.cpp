@@ -7,6 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
     myFieldObj.gui = ui;
+    enemyFieldObj.gui = ui;
     enemyFieldObj.playerField = &myFieldObj;
 }
 
