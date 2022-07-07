@@ -10,12 +10,14 @@ CONFIG += c++17
 
 SOURCES += \
     battlefield.cpp \
+    enemyfield.cpp \
     main.cpp \
     mainwindow.cpp \
     ship.cpp
 
 HEADERS += \
     battlefield.h \
+    enemyfield.h \
     mainwindow.h \
     ship.h
 
