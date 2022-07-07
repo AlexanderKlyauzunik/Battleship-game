@@ -1,5 +1,25 @@
 #include "myfield.h"
 
+void MyField::blink(int x, int y)
+{
+    QThread t1;
+
+    gui->myField->item(y,x)->setBackground(QBrush(QColor(0,0,0)));
+    gui->myField->repaint();
+    t1.msleep(300);
+    //gui->myfield->item(y,x)->setBackgroundColor(QColor(255,255,255));
+    gui->myField->item(y,x)->setBackground(QBrush(QColor(255,255,255)));
+    gui->myField->repaint();
+    t1.msleep(300);
+    //gui->myfield->item(y,x)->setBackgroundColor(QColor(0,0,0));
+    gui->myField->item(y,x)->setBackground(QBrush(QColor(0,0,0)));
+    gui->myField->repaint();
+    t1.msleep(300);
+    //gui->myfield->item(y,x)->setBackgroundColor(QColor(255,255,255));
+    gui->myField->item(y,x)->setBackground(QBrush(QColor(255,255,255)));
+    gui->myField->repaint();
+}
+
 MyField::MyField()
 {
 
@@ -31,14 +51,14 @@ int MyField::put(int x, int y)
            for (int i=0;i<n;i++)
            {
                field[x][y + i] = id;
-               QTableWidgetItem * ti=gui->myField->item(y + i, x);
+               QTableWidgetItem* ti = gui->myField->item(y + i, x);
 
              if(!ti){
                ti=new QTableWidgetItem();
                gui->myField->setItem(y + i, x, ti);
              }
 
-           ti->setBackground(QColor(255,255,0));
+           ti->setBackground(QColor(153, 255, 153));
            ti->setText("X");
            }
        }
@@ -53,7 +73,7 @@ int MyField::put(int x, int y)
                    gui->myField->setItem(y, x + i, ti);
                }
 
-               ti->setBackground(QColor(255, 255, 0));
+               ti->setBackground(QColor(153, 255, 153));
                ti->setText("X");
            }
        }
@@ -105,18 +125,21 @@ int MyField::strike(int x, int y)
 
     if (hit==0)
     {
-        QTableWidgetItem * ti=gui->myField->item(y, x);
+        QTableWidgetItem* ti=gui->myField->item(y, x);
 
-        if(!ti){
+        if(!ti)
+        {
             ti=new QTableWidgetItem();
         }
 
         gui->myField->setItem(y, x, ti);
+        blink(x,y);
         ti->setText("-");
     }
 
     if (hit==1)
     {
+        blink(x,y);
        gui->myField->item(y,x)->setText("X");
        gui->myField->item(y,x)->setBackground(QColor(255, 100, 100));
     }
@@ -225,6 +248,7 @@ int MyField::strike(int x, int y)
                gui->myField->item(yship + nship, xship)->setText("-");
            }
        }
+       blink(x,y);
        gui->myField->item(y, x)->setBackground(QColor(255, 0, 0));
     }
     return hit;

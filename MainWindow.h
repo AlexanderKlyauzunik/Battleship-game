@@ -6,6 +6,7 @@
 #include "ship.h"
 #include "myfield.h"
 #include "enemyfield.h"
+#include <QThread>
 
 namespace Ui {
 class MainWindow;

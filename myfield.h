@@ -2,9 +2,12 @@
 #define MYFIELD_H
 
 #include "battlefield.h"
+#include <QThread>
 
 class MyField : public BattleField
 {
+private:
+     void blink(int x,int y);
 public:
     MyField();
 

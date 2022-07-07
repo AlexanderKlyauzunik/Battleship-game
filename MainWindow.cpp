@@ -9,6 +9,8 @@ MainWindow::MainWindow(QWidget *parent) :
     myFieldObj.gui = ui;
     enemyFieldObj.gui = ui;
     enemyFieldObj.playerField = &myFieldObj;
+    myFieldObj.resetfield();
+    enemyFieldObj.resetfield();
 }
 
 MainWindow::~MainWindow()

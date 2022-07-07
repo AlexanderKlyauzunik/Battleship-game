@@ -143,7 +143,7 @@ int BattleField::checkPlacement(int x, int y, int n, bool horizontal)
     return 0;
 }
 
-void BattleField::on_radioButton_ForOneDeck_clicked()
+/*void BattleField::on_radioButton_ForOneDeck_clicked()
 {
 
 }
@@ -200,5 +200,5 @@ void BattleField::on_myField_cellClicked(int row, int column)
 void BattleField::on_enemyField_cellClicked(int row, int column)
 {
 
-}
+}*/
 
