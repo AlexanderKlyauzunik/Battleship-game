@@ -34,6 +34,17 @@ public:
     virtual int put (int x, int y) = 0;
     virtual int strike(int x,int y)=0;
     virtual void resetfield()=0;
+private slots:
+    void on_radioButton_ForOneDeck_clicked();
+    void on_radioButton_ForTwoDecks_clicked();
+    void on_radioButton_ForThreeDecks_clicked();
+    void on_radioButton_ForFourDecks_clicked();
+    void on_radioButton_Vertical_clicked();
+    void on_radioButton_Horizontal_clicked();
+    void on_randomButton_clicked();
+    void on_newGamebutton_clicked();
+    void on_myField_cellClicked(int row, int column);
+    void on_enemyField_cellClicked(int row, int column);
 };
 
 #endif // BATTLEFIELD_H

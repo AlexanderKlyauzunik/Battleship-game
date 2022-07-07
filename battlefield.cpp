@@ -142,3 +142,63 @@ int BattleField::checkPlacement(int x, int y, int n, bool horizontal)
 
     return 0;
 }
+
+void BattleField::on_radioButton_ForOneDeck_clicked()
+{
+
+}
+
+
+void BattleField::on_radioButton_ForTwoDecks_clicked()
+{
+
+}
+
+
+void BattleField::on_radioButton_ForThreeDecks_clicked()
+{
+
+}
+
+
+void BattleField::on_radioButton_ForFourDecks_clicked()
+{
+
+}
+
+
+void BattleField::on_radioButton_Vertical_clicked()
+{
+
+}
+
+
+void BattleField::on_radioButton_Horizontal_clicked()
+{
+
+}
+
+
+void BattleField::on_randomButton_clicked()
+{
+
+}
+
+
+void BattleField::on_newGamebutton_clicked()
+{
+
+}
+
+
+void BattleField::on_myField_cellClicked(int row, int column)
+{
+
+}
+
+
+void BattleField::on_enemyField_cellClicked(int row, int column)
+{
+
+}
+

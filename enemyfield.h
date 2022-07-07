@@ -16,7 +16,7 @@ public:
     void aiPlacement();
     int put(int x, int y);
     int strike(int x, int y);
-    void resetField();
+    void resetfield();
     EnemyField();
 };
 

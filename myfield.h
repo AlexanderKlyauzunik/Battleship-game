@@ -10,7 +10,7 @@ public:
 
     int put(int x, int y);
     int strike(int x,int y);
-    void ai_placement();
+    void aiPlacement();
     void resetfield();
 };
 

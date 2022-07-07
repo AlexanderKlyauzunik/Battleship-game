@@ -230,7 +230,7 @@ int MyField::strike(int x, int y)
     return hit;
 }
 
-void MyField::ai_placement()
+void MyField::aiPlacement()
 {
     int status;
     do

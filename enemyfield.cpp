@@ -433,7 +433,7 @@ int EnemyField::strike(int x, int y)
             win.setText("WIN");
             win.setFixedSize(400,400);
             win.exec();
-            resetField();
+            resetfield();
         }
 
         int nShip = ships[id - 1].getN();
@@ -558,7 +558,7 @@ int EnemyField::strike(int x, int y)
     return hit;
 }
 
-void EnemyField::resetField()
+void EnemyField::resetfield()
 {
     this -> currentState = 10;
     for(int i = 0;i < 10; ++i)
