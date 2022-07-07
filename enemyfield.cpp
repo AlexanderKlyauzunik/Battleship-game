@@ -419,7 +419,7 @@ int EnemyField::strike(int x, int y)
     if (hit == 1)
     {
         gui ->enemyField -> item(y, x)->setText("X");
-        gui->enemyField->item(y,x)->setBackgroundColor(QColor(255,100,100));
+        gui->enemyField->item(y,x)->setBackground(QColor(255,100,100));
     }
 
     if (hit == 2)
@@ -547,7 +547,7 @@ int EnemyField::strike(int x, int y)
                 gui -> enemyField -> item(yShip + nShip, xShip) -> setText("-");
             }
         }
-        gui -> enemyField -> item(y,x) -> setBackgroundColor(QColor(255,0,0));
+        gui -> enemyField -> item(y,x) -> setBackground(QColor(255,0,0));
     }
 
     if (!hit)

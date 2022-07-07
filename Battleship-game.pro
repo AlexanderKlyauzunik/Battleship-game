@@ -13,12 +13,14 @@ SOURCES += \
     enemyfield.cpp \
     main.cpp \
     mainwindow.cpp \
+    myfield.cpp \
     ship.cpp
 
 HEADERS += \
     battlefield.h \
     enemyfield.h \
     mainwindow.h \
+    myfield.h \
     ship.h
 
 # Default rules for deployment.
