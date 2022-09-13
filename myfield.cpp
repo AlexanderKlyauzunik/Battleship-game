@@ -185,7 +185,7 @@ int MyField::strike(int x, int y)
                        ti = new QTableWidgetItem();
                         gui->myField->setItem(yship-1,i,ti);
                    }
-                   gui->myField->item(yship - 1, i)->setText("-");
+                   //gui->myField->item(yship - 1, i)->setText("-");
                }
 
                if (validPosition(i, y + 1))
