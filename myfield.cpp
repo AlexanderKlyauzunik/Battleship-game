@@ -34,8 +34,7 @@ int MyField::put(int x, int y)
         return -1;
     }
 
-    if (freeShips[4 - n] == 0)
-    {
+    if (freeShips[4 - n] == 0){
         return -2;
     }
 
@@ -82,6 +81,28 @@ int MyField::put(int x, int y)
        this->ships[id - 1] = temp;
        this->currentState--;
        --this->freeShips[4 - n];
+
+       if (freeShips[4 - n] == 0)
+       {
+           switch(n){
+           case 1:
+               this->gui->radioButton_ForOneDeck->setEnabled(false);
+               break;
+
+           case 2:
+               this->gui->radioButton_ForTwoDecks->setEnabled(false);
+               break;
+
+           case 3:
+               this->gui->radioButton_ForThreeDecks->setEnabled(false);
+               break;
+
+           case 4:
+               this->gui->radioButton_ForFourDecks->setEnabled(false);
+               break;
+
+           }
+       }
 
        if (this->currentState == 0)
        {

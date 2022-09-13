@@ -23,38 +23,26 @@ void MainWindow::on_radioButton_ForOneDeck_clicked()
 {
     this->myFieldObj.setOneDeck();
     this->ui->radioButton_ForOneDeck->setChecked(true);
-     this->ui->radioButton_ForTwoDecks->setChecked(false);
-     this->ui->radioButton_ForThreeDecks->setChecked(false);
-     this->ui->radioButton_ForFourDecks->setChecked(false);
 }
 
 
 void MainWindow::on_radioButton_ForTwoDecks_clicked()
 {
     this->myFieldObj.setTwoDeck();
-    this->ui->radioButton_ForOneDeck->setChecked(false);
      this->ui->radioButton_ForTwoDecks->setChecked(true);
-     this->ui->radioButton_ForThreeDecks->setChecked(false);
-     this->ui->radioButton_ForFourDecks->setChecked(false);
 }
 
 
 void MainWindow::on_radioButton_ForThreeDecks_clicked()
 {
     this->myFieldObj.setThreeDeck();
-    this->ui->radioButton_ForOneDeck->setChecked(false);
-     this->ui->radioButton_ForTwoDecks->setChecked(false);
      this->ui->radioButton_ForThreeDecks->setChecked(true);
-     this->ui->radioButton_ForFourDecks->setChecked(false);
 }
 
 
 void MainWindow::on_radioButton_ForFourDecks_clicked()
 {
     this->myFieldObj.setFourDeck();
-    this->ui->radioButton_ForOneDeck->setChecked(false);
-     this->ui->radioButton_ForTwoDecks->setChecked(false);
-     this->ui->radioButton_ForThreeDecks->setChecked(false);
      this->ui->radioButton_ForFourDecks->setChecked(true);
 }
 
@@ -106,5 +94,14 @@ void MainWindow::on_newGamebutton_clicked()
     this->ui->gui_decknum->setEnabled(true);
     this->ui->gui_shippos->setEnabled(true);
     this->ui->randomButton->setEnabled(true);
+    this->ui->radioButton_ForFourDecks->setEnabled(true);
+    this->ui->radioButton_ForThreeDecks->setEnabled(true);
+    this->ui->radioButton_ForTwoDecks->setEnabled(true);
+    this->ui->radioButton_ForOneDeck->setEnabled(true);
+}
+
+void MainWindow::grey_out_radioButton_ForFourDecks()
+{
+    this->ui->radioButton_ForFourDecks->setEnabled(false);
 }
 

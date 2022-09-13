@@ -40,6 +40,10 @@ private slots:
 
     void on_newGamebutton_clicked();
 
+    void grey_out_radioButton_ForFourDecks();
+
+signals:
+
 private:
     Ui::MainWindow *ui;
     MyField myFieldObj;

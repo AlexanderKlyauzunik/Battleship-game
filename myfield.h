@@ -2,6 +2,7 @@
 #define MYFIELD_H
 
 #include "battlefield.h"
+#include "ui_mainwindow.h"
 #include <QThread>
 
 class MyField : public BattleField
