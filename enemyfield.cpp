@@ -441,7 +441,7 @@ int EnemyField::strike(int x, int y)
         int horShip = ships[id - 1].getHor();
         gui -> enemyField -> item(y, x) -> setText("X");
 
-        if (horShip)
+       /* if (horShip)
         {
             for (int i = xShip - 1; i <= xShip + nShip; ++i)
             {
@@ -469,6 +469,7 @@ int EnemyField::strike(int x, int y)
                     gui -> enemyField -> item(yShip + 1, i) -> setText("-");
                 }
             }
+
             if (validPosition(xShip - 1, yShip))
             {
                  field[xShip - 1][y] = -1;
@@ -545,8 +546,9 @@ int EnemyField::strike(int x, int y)
                 }
                 gui -> enemyField -> item(yShip + nShip, xShip) -> setText("-");
             }
-        }
-        gui -> enemyField -> item(y,x) -> setBackground(QColor(255,0,0));
+
+        }*/
+        gui -> enemyField -> item(y,x) -> setBackground(QColor(255,123,0));
     }
 
     if (!hit)

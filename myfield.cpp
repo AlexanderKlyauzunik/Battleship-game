@@ -197,7 +197,7 @@ int MyField::strike(int x, int y)
                        gui->myField->setItem(yship + 1, i, ti);
                    }
 
-                   gui->myField->item(yship + 1, i)->setText("-");
+                  // gui->myField->item(yship + 1, i)->setText("-");
                }
            }
            if (validPosition(xship - 1, yship))
@@ -208,7 +208,7 @@ int MyField::strike(int x, int y)
                    ti = new QTableWidgetItem();
                    gui->myField->setItem(yship, xship - 1, ti);
                }
-                gui->myField->item(yship, xship - 1)->setText("-");
+               // gui->myField->item(yship, xship - 1)->setText("-");
 
            }
            if (validPosition(xship + nship, yship))
@@ -219,7 +219,7 @@ int MyField::strike(int x, int y)
                    ti=new QTableWidgetItem();
                    gui->myField->setItem(yship, xship + nship, ti);
                }
-               gui->myField->item(yship, xship + nship)->setText("-");
+               //gui->myField->item(yship, xship + nship)->setText("-");
            }
        }
        else
@@ -234,7 +234,7 @@ int MyField::strike(int x, int y)
                        ti = new QTableWidgetItem();
                        gui->myField->setItem(i, xship - 1, ti);
                    }
-                   gui->myField->item(i, xship - 1)->setText("-");
+                //   gui->myField->item(i, xship - 1)->setText("-");
                   ;
                }
                if (validPosition(xship + 1, i))
@@ -245,7 +245,7 @@ int MyField::strike(int x, int y)
                        ti=new QTableWidgetItem();
                        gui->myField->setItem(i, xship + 1, ti);
                    }
-                   gui->myField->item(i, xship + 1)->setText("-");
+                   //gui->myField->item(i, xship + 1)->setText("-");
                }
            }
            if (validPosition(xship, yship - 1))
@@ -256,7 +256,7 @@ int MyField::strike(int x, int y)
                    ti = new QTableWidgetItem();
                    gui->myField->setItem(yship - 1, xship, ti);
                }
-               gui->myField->item(yship - 1, xship)->setText("-");
+               //gui->myField->item(yship - 1, xship)->setText("-");
            }
            if (validPosition(xship, yship + nship))
            {
@@ -266,11 +266,11 @@ int MyField::strike(int x, int y)
                    ti=new QTableWidgetItem();
                    gui->myField->setItem(yship + nship, xship, ti);
                }
-               gui->myField->item(yship + nship, xship)->setText("-");
+              // gui->myField->item(yship + nship, xship)->setText("-");
            }
        }
        blink(x,y);
-       gui->myField->item(y, x)->setBackground(QColor(255, 0, 0));
+       gui->myField->item(y, x)->setBackground(QColor(255, 123, 0));
     }
     return hit;
 }
